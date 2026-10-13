@@ -5,9 +5,9 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping("/api/filers")
+@RequestMapping("/api/filer")
 @CrossOrigin(
-        origins = "http://localhost:4200",
+        origins = {"http://localhost:4200", "http://localhost:54288/,"},
         allowedHeaders = "*",
         methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.OPTIONS}
 )

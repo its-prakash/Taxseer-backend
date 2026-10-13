@@ -18,17 +18,17 @@ public class Filers {
     private Long id;
     private String name;
     private String ein;
-    private String addr;
-    private String addr2;
+    private String address;
+    private String address2;
     private String city;
-    private String st;
+    private String state;
     private String zip;
     private String phone;
     private String email;
     private String stateNo;
     private LocalDate date;
 
-    private String used;    // Added from DB (text)
+    private String form_used;    // Added from DB (text)
     private Integer recent; // Added from DB (integer)
     private Integer pending;// Added from DB (integer)
     private Integer filed;  // Added from DB (integer)

@@ -25,7 +25,7 @@ import java.time.LocalDateTime;
 public class Recipients {
     @Id
     private Long id;
-    private Long filer;
+    private String filer;
     private String type;        // SSN | EIN | Unknown
     private String tin;
     private String first;       // nullable
@@ -43,14 +43,14 @@ public class Recipients {
     private Boolean econsent;   // nullable
 
     @Column("w9_status")
-    private String w9;          // Submitted | Requested | Not requested
+    private String w9_status;          // Submitted | Requested | Not requested
 
     @Column("w9_sent")
-    private String sent;        // nullable — ISO date string
+    private String w9_sent;        // nullable — ISO date string
 
     @Column("w9_got")
-    private String got;         // nullable — ISO date string
+    private String w9_got;         // nullable — ISO date string
 
     @Column("w9_rem")
-    private Integer rem;
+    private Integer g9_rem;
 }

@@ -29,4 +29,8 @@ public class RecipientService {
     public Mono<Void> deleteRecipients(Long id){
         return recipientRespository.deleteById(id);
     }
+
+    public Flux<Recipients> findByFiler(String filer){
+        return this.recipientRespository.findByFiler(filer);
+    }
 }
