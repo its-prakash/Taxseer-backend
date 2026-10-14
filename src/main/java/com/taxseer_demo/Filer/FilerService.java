@@ -30,4 +30,8 @@ public class FilerService {
     public Mono<Filers> editFilers(Filers filer) {
         return filerRepository.save(filer);
     }
+
+    public Mono<Filers> getFilerByID(Long id){
+        return filerRepository.findById(id);
+    }
 }

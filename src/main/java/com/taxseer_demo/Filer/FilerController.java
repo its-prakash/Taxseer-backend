@@ -4,6 +4,8 @@ import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import javax.annotation.processing.Filer;
+
 @RestController
 @RequestMapping("/api/filer")
 @CrossOrigin(
@@ -40,5 +42,10 @@ public class FilerController {
     public Mono<Filers> editFiler(@PathVariable Long id, @RequestBody Filers filer) {
         filer.setId(id);
         return filerService.editFilers(filer);
+    }
+
+    @GetMapping("/{id}")
+    public Mono<Filers> getFilerById(@PathVariable("id") Long id) {
+        return filerService.getFilerByID(id);
     }
 }
